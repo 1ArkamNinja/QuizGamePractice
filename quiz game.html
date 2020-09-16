@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+	<title>Quiz genorator</title>
+		<script>
+			let game = {
+				questions: [
+					{
+						qText: "Is Fortnite gud?",
+						aList: ['Yes', 'Sure', 'Maybe', 'No'],
+						aCorrect: 'No'
+					}
+				],
+				questions: [
+					{
+						qText: "Is Life gud?",
+						aList: ['Yes', 'Sure', 'Maybe', 'No'],
+						aCorrect: 'No'
+					}
+				],
+				questions: [
+					{
+						qText: "Is Death gud?",
+						aList: ['Yes', 'Sure', 'Maybe', 'No'],
+						aCorrect: 'Yes'
+					}
+				],
+				createQuestion: function(){
+					document.getElementByID("answerBox").innerHTML = "";
+					let RNGesus = Math.floor(Math.random() * 3);
+					document.getElementByID("quectionBox").innerHTML = game.questions[RNGesus].qText;
+					for (let i = 0; i < game.questions[RNGesus].aList.length; i++){
+						document.getElementByID("answerBox").innerHTML += 
+						`<input type="radio" id="answer$(i)" name="selection" value="$game.questions[RNGesus].aList(i)">
+						<label for"$(game.questions[RNGesus}.aList()i"> for"$(game.questions[RNGesus}.aList()i"</label>`
+					}
+				},
+				checkAnswer: function() {
+					
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="">
+		<div id ="quectionBox">
+		</div>
+		<div id ="answerBox">
+		</div>
+		<div id ="responseBox">
+		</div>
+		<button id="summit" onclick=""> Sumit answer</buttion>
+	</body>
+
+
+</html>
